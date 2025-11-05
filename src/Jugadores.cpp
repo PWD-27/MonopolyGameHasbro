@@ -1,50 +1,56 @@
-#include "Jugador.h"
+#include "Jugadores.h"
+#include <iostream>
+using namespace std;
 
-Jugador::Jugador(int id_, string nombre_, long long dineroInicial) {
-    id = id_;
-    nombre = nombre_;
-    dinero = dineroInicial;
-    posicion = 0;
-    enCarcel = false;
-    bancarrota = false;
+// Constructor
+Jugador::Jugador(const string& n, int dineroInicial)
+    : nombre(n), dinero(dineroInicial), posicion(0), enCarcel(false), tarjetaLibertad(false) {}
+
+// Getters
+string Jugador::getNombre() const { return nombre; }
+int Jugador::getDinero() const { return dinero; }
+int Jugador::getPosicion() const { return posicion; }
+bool Jugador::estaEnCarcel() const { return enCarcel; }
+bool Jugador::tieneTarjetaLibertad() const { return tarjetaLibertad; }
+vector<Prop*> Jugador::getPropiedades() const { return propiedades; }
+
+// Setters
+void Jugador::setPosicion(int p) { posicion = p; }
+void Jugador::setDinero(int d) { dinero = d; }
+void Jugador::setEnCarcel(bool estado) { enCarcel = estado; }
+void Jugador::setTarjetaLibertad(bool estado) { tarjetaLibertad = estado; }
+void Jugador::usarTarjetaLibertad() { tarjetaLibertad = false; enCarcel = false; }
+
+// Operaciones
+void Jugador::mover(int casillas, int tamañoTablero) { posicion = (posicion + casillas) % tamañoTablero; }
+void Jugador::cobrar(int cantidad) { dinero += cantidad; }
+bool Jugador::pagar(int cantidad) {
+    if (cantidad > dinero) return false;
+    dinero -= cantidad;
+    return true;
 }
-
-bool Jugador::pagar(long long monto) {
-    if (monto <= 0) return false;
-    if (dinero >= monto) {
-        dinero -= monto;
-        return true;
-    } else {
-        bancarrota = true;
-        cout << " !SALDO INSUFICIENTE! " << nombre << " no tiene suficiente dinero y ha caído en bancarrota!" << endl;
-        return false;
+void Jugador::comprarPropiedad(Prop* propiedad) {
+    if (propiedad != nullptr && propiedad->disponible && dinero >= propiedad->precio) {
+        pagar(propiedad->precio);
+        propiedad->disponible = false;
+        propiedades.push_back(propiedad);
+        cout << nombre << " compró " << propiedad->nombre << endl;
     }
 }
-
-void Jugador::recibir(long long monto) {
-    if (monto > 0) dinero += monto;
+bool Jugador::tieneMonopolio(const string& color, const ManejadorPropiedades& todasPropiedades) const {
+    int totalColor = 0, jugadorColor = 0;
+    for (auto p : propiedades) if (p->color == color) jugadorColor++;
+    for (auto p : todasPropiedades.getLista()) if (p.color == color) totalColor++;
+    return totalColor > 0 && jugadorColor == totalColor;
 }
 
-void Jugador::moverA(int nuevaPos) {
-    posicion = nuevaPos;
+// Mostrar estado
+void Jugador::mostrar() const {
+    cout << "Jugador: " << nombre << " | Dinero: $" << dinero
+         << " | Posición: " << posicion
+         << " | En cárcel: " << (enCarcel ? "Sí" : "No") << endl;
+    cout << "Propiedades: ";
+    if (propiedades.empty()) cout << "Ninguna";
+    else for (auto p : propiedades) cout << p->nombre << ", ";
+    cout << endl;
 }
-
-void Jugador::agregarPropiedad(int idPropiedad) {
-    propiedades.push_back(idPropiedad);
-}
-
-void Jugador::mostrarEstado() const {
-    cout << "Jugador: " << nombre
-         << " | Dinero: $" << dinero
-         << " | Posicion: " << posicion
-         << " | Propiedades: " << propiedades.size()
-         << (enCarcel ? " | En carcel" : "")
-         << (bancarrota ? " | Bancarrota" : "")
-         << endl;
-}
-
-int Jugador::getPosicion() const { return posicion; }
-long long Jugador::getDinero() const { return dinero; }
-string Jugador::getNombre() const { return nombre; }
-bool Jugador::estaEnCarcel() const { return enCarcel; }
-void Jugador::setEnCarcel(bool estado) { enCarcel = estado; }
