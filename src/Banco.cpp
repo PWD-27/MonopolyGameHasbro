@@ -1,5 +1,5 @@
-#include "Banco.h"
-#include "Jugador.h"
+#include "../Banco.h"
+#include "../Jugador.h"
 
 Banco::Banco(long long montoInicial) {
     this->dineroTotal = montoInicial;
