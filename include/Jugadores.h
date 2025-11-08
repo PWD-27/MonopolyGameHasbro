@@ -1,55 +1,48 @@
-#pragma once
-#include <iostream>
-#include <vector>
+#ifndef JUGADORES_H
+#define JUGADORES_H
+
 #include <string>
+#include <vector>
+#include "Propiedades.h"
 using namespace std;
 
-/*
-    TAD: Jugador
-    Responsabilidad: Representa a un jugador del juego Monopoly.
-*/
 class Jugador {
 private:
-    int id;
     string nombre;
-    long long dinero;
+    int dinero;
     int posicion;
     bool enCarcel;
-    bool bancarrota;
-    vector<int> propiedades; // IDs de propiedades del tablero
+    bool tarjetaLibertad;
+    vector<Prop*> propiedades;
 
 public:
-    // Pre: nombre no vacio, dineroInicial >= 0
-    // Post: Se crea un jugador con dinero inicial y estado normal
-    Jugador(int id_, string nombre_, long long dineroInicial);
-
-    // Pre: monto >= 0
-    // Post: Reduce el dinero del jugador en 'monto' si tiene suficiente
-    bool pagar(long long monto);
-
-    // Pre: monto >= 0
-    // Post: Aumenta el dinero del jugador en 'monto'
-    void recibir(long long monto);
-
-    // Pre: pos >= 0
-    // Post: Actualiza la posición del jugador en el tablero
-    void moverA(int nuevaPos);
-
-    // Pre: propiedad valida
-    // Post: Agrega el ID de propiedad a la lista de propiedades
-    void agregarPropiedad(int idPropiedad);
-
-    // Pre: ninguno
-    // Post: Imprime información del jugador
-    void mostrarEstado() const;
+    // Constructor
+    Jugador(const string& n = "", int dineroInicial = 1500);
 
     // Getters
-    int getPosicion() const;
-    long long getDinero() const;
     string getNombre() const;
+    int getDinero() const;
+    int getPosicion() const;
     bool estaEnCarcel() const;
+    bool tieneTarjetaLibertad() const;
+    vector<Prop*> getPropiedades() const;
 
-    // Pre: ninguno
-    // Post: Cambia el estado de encarcelado
+    // Setters
+    void setPosicion(int p);
+    void setDinero(int d);
     void setEnCarcel(bool estado);
+    void setTarjetaLibertad(bool estado);
+    void usarTarjetaLibertad();
+
+    // Operaciones
+    void mover(int casillas, int tamañoTablero);
+    void cobrar(int cantidad);
+    bool pagar(int cantidad);
+    void comprarPropiedad(Prop* propiedad);
+    bool tieneMonopolio(const string& color, const ManejadorPropiedades& todasPropiedades) const;
+
+    // Mostrar estado
+    void mostrar() const;
 };
+
+#endif
