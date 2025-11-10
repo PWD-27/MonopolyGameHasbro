@@ -1,37 +1,36 @@
-#pragma once
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+#ifndef BANCO_H
+#define BANCO_H
 
-/*
-    TAD: Banco
-    Responsabilidad: Gestiona el dinero del sistema y las transacciones entre jugadores y el banco.
-*/
-class Jugador; // Declaración adelantada para poder usar la clase Jugador
+#include <iostream>
+using namespace std;
 
 class Banco {
 private:
-    long long dineroTotal;
+    int dinero;
+    int casasDisponibles;
+    int hotelesDisponibles;
 
 public:
-    // Pre: montoInicial >= 0
-    // Post: Se crea un banco con montoInicial de dinero disponible
-    Banco(long long montoInicial);
+    // Constructor
+    Banco(int dineroInicial = 20580, int casas = 32, int hoteles = 12);
 
-    // Pre: monto >= 0 y jugador valido
-    // Post: Se transfiere 'monto' del banco al jugador (si hay fondos suficientes)
-    bool pagarAJugador(Jugador &jug, long long monto);
+    // Getters
+    int getDinero() const;
+    int getCasasDisponibles() const;
+    int getHotelesDisponibles() const;
 
-    // Pre: monto >= 0 y jugador valido
-    // Post: El banco recibe 'monto' del jugador (si este tiene suficiente dinero)
-    bool cobrarDeJugador(Jugador &jug, long long monto);
+    // Operaciones
+    void cobrar(int cantidad);        // El banco recibe dinero
+    bool pagar(int cantidad);         // El banco paga dinero
+    void retirar(int cantidad);       // Dinero que el banco entrega al jugador
+    void depositar(int cantidad);     // Dinero que el banco recibe de jugador
+    bool comprarCasa();               // Reducir casas disponibles si hay
+    bool venderCasa();                // Aumentar casas disponibles
+    bool comprarHotel();              // Reducir hoteles disponibles si hay
+    bool venderHotel();               // Aumentar hoteles disponibles
 
-    // Pre: ninguno
-    // Post: Muestra en pantalla el dinero actual del banco
-    void mostrarEstado() const;
-
-    // Pre: ninguno
-    // Post: Devuelve el dinero total actual del banco
-    long long getDineroTotal() const;
+    // Mostrar estado
+    void mostrar() const;
 };
+
+#endif
