@@ -1,0 +1,8 @@
+# ninja log v6
+59	2157	7842244877708953	CMakeFiles/untitled28.dir/Banco.cpp.obj	f620090d682a38f2
+14	2167	7842244877218052	CMakeFiles/untitled28.dir/main.cpp.obj	cc89a162cdd7050c
+244	2289	7842244879521004	CMakeFiles/untitled28.dir/Jugador.cpp.obj	fdf707abad8f5c93
+2290	2708	7842244899967841	untitled28.exe	f907a4a1f6c58f3d
+18	2003	7842307994028242	CMakeFiles/untitled28.dir/Banco.cpp.obj	f620090d682a38f2
+34	2185	7842307994173661	CMakeFiles/untitled28.dir/Jugador.cpp.obj	fdf707abad8f5c93
+2185	2572	7842308015683142	untitled28.exe	f907a4a1f6c58f3d
