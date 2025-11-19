@@ -104,4 +104,63 @@
 
 #### 🎯 Actividades Realizadas
 - Creación de archivos `.txt` que representan propiedades y tarjetas oficiales del Monopoly. (2h)
-- Implementación de TAD Propiedad con su lógica de hi
+- Implementación de TAD Propiedad con su lógica de hipotecas, precios y alquileres. (3.5h)
+
+#### 🚧 Problemas Encontrados
+- Desorden en los archivos del repositorio.  
+  **Estado:** Resuelto  
+  **Solución:** Reestructuración completa de carpetas por Alejandro.
+
+#### ✅ Decisiones Clave
+- Establecer un estándar de nombres de archivo y carpetas.
+- Separar toda data del juego en `/data`.
+
+#### ➡️ Próximos Pasos
+- Implementar TAD Tarjeta y colas.
+
+---
+
+### 🔵 Día 6 — 2025-11-15
+
+#### 🎯 Actividades Realizadas
+- Implementación de TAD Tarjeta con colas FIFO para Arca Comunal y Casualidad. (3h)
+- Lectura de tarjetas desde archivos `.txt`. (1h)
+
+#### 🚧 Problemas Encontrados
+- Errores al mezclar ramas por histories no relacionadas (`fatal: unrelated histories`).  
+  **Estado:** Resuelto  
+  **Solución:** Uso de flags `--allow-unrelated-histories` y depuración del archivo corrupto.
+
+#### ✅ Decisiones Clave
+- Separar mecánica de tarjetas del TAD Jugador.
+
+#### ➡️ Próximos Pasos
+- Implementar TAD Tablero.
+
+---
+
+### 🔵 Día 7 — 2025-11-18
+
+#### 🎯 Actividades Realizadas
+- Implementación completa de TAD Casilla. (1.5h)
+- Implementación de TAD Tablero leyendo desde archivos y construyendo nodos. (3h)
+- Revisión final a los TADs y documentación de Pre/Post condiciones. (1h)
+
+#### 🚧 Problemas Encontrados
+- Error al agregar Tablero.cpp debido a ruta equivocada en Git Bash.  
+  **Estado:** Resuelto  
+  **Solución:** Usar rutas relativas reales (`src/Tablero.cpp`).
+
+#### ✅ Decisiones Clave
+- Mantener un patrón claro de nombres y rutas para evitar errores futuros.
+
+#### ➡️ Próximos Pasos
+- Comenzar implementación del TAD Juego.
+- Integrar todos los TADs en flujo lógico.
+
+---
+
+## ✨ Conclusión Final
+El proyecto ha progresado notablemente gracias a la colaboración equilibrada entre ambos integrantes, con una división de responsabilidades clara y reuniones periódicas que permitieron revisar avances, resolver problemas y mantener coherencia entre el diseño y la implementación.
+
+---
