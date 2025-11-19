@@ -164,3 +164,44 @@
 El proyecto ha progresado notablemente gracias a la colaboración equilibrada entre ambos integrantes, con una división de responsabilidades clara y reuniones periódicas que permitieron revisar avances, resolver problemas y mantener coherencia entre el diseño y la implementación.
 
 ---
+
+#### Arquitectura General del Proyecto
+
+```mermaid
+flowchart TD
+
+    %% ===========================
+    %% NODOS PRINCIPALES DEL SISTEMA
+    %% ===========================
+
+    JUEGO["🎮 TAD Juego<br>Controla el flujo del juego, turnos y reglas"]
+    TABLERO["🟦 TAD Tablero<br>Almacena y gestiona 40 casillas"]
+    CASILLA["📍 TAD Casilla<br>Representa casillas individuales"]
+    PROPIEDAD["🏠 TAD Propiedad<br>Maneja precios, alquiler, hipoteca"]
+    TARJETA["🃏 TAD Tarjeta<br>Arca Comunal / Casualidad<br>(colas FIFO)"]
+    COLA_TARJETAS["📚 Colas de Tarjetas<br>FIFO para cartas del juego"]
+    JUGADOR["👤 TAD Jugador<br>Dinero, posición, propiedades, estado"]
+    BANCO["🏦 TAD Banco<br>Dinero total, hipotecas, pagos globales"]
+    LOGGER["📜 TAD Logger<br>Registro de acciones para auditoría"]
+    ESTADOS["🔁 Pila de Estados<br>Permite deshacer movimientos"]
+    
+    %% ===========================
+    %% RELACIONES ENTRE SISTEMAS
+    %% ===========================
+
+    JUEGO --> TABLERO
+    JUEGO --> JUGADOR
+    JUEGO --> ESTADOS
+    JUEGO --> LOGGER
+
+    TABLERO --> CASILLA
+    CASILLA --> PROPIEDAD
+
+    JUEGO --> TARJETA
+    TARJETA --> COLA_TARJETAS
+
+    JUGADOR --> PROPIEDAD
+    JUGADOR --> BANCO
+
+    BANCO --> PROPIEDAD
+    BANCO --> JUGADOR
