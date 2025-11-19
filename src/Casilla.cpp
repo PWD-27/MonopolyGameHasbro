@@ -1,4 +1,4 @@
-#include "Casilla.h"
+#include "../include/Casilla.h"
 #include <iostream>
 using namespace std;
 

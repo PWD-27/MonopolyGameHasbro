@@ -1,4 +1,5 @@
-#include "Juego.h"
+#include "../include/Juego.h"
+#include "../include/Tarjeta.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

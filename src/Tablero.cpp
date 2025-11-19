@@ -1,4 +1,4 @@
-#include "Tablero.h"
+#include "../include/Tablero.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>

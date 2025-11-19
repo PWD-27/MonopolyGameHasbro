@@ -1,5 +1,5 @@
-#include "Tarjeta.h"
-#include "Jugadores.h"  // Necesario para aplicar efectos al jugador
+#include "../include/Tarjeta.h"
+#include "../include/Jugadores.h"  // Necesario para aplicar efectos al jugador
 #include <fstream>
 #include <sstream>
 #include <iostream>

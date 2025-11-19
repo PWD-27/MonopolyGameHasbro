@@ -1,4 +1,4 @@
-#include "Propiedades.h"
+#include "../include/Propiedades.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
