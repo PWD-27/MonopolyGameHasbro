@@ -1,0 +1,40 @@
+0,Salida (GO),Especial
+1,Avenida Mediterráneo,Propiedad
+2,Arca Comunal,Tarjeta
+3,Avenida Báltica,Propiedad
+4,Impuesto sobre ingresos,Especial
+5,Ferrocarril Reading,Propiedad
+6,Avenida Oriental,Propiedad
+7,Casualidad,Tarjeta
+8,Avenida Vermont,Propiedad
+9,Avenida Connecticut,Propiedad
+10,Cárcel / Solo de visita,Especial
+11,Plaza San Carlos,Propiedad
+12,Compañía Eléctrica,Propiedad
+13,Avenida de los Estados,Propiedad
+14,Ferrocarril Pennsylvania,Propiedad
+15,Avenida St. James,Propiedad
+16,Arca Comunal,Tarjeta
+17,Avenida Tennessee,Propiedad
+18,Avenida Nueva York,Propiedad
+19,Estacionamiento libre,Especial
+20,Avenida Kentucky,Propiedad
+21,Casualidad,Tarjeta
+22,Avenida Indiana,Propiedad
+23,Avenida Illinois,Propiedad
+24,Ferrocarril B&O,Propiedad
+25,Avenida Atlantic,Propiedad
+26,Avenida Ventnor,Propiedad
+27,Compañía de Agua,Propiedad
+28,Jardines Marvin,Propiedad
+29,Ve a la Cárcel,Especial
+30,Avenida Pacific,Propiedad
+31,Avenida North Carolina,Propiedad
+32,Arca Comunal,Tarjeta
+33,Avenida Pennsylvania,Propiedad
+34,Ferrocarril Short Line,Propiedad
+35,Casualidad,Tarjeta
+36,Plaza del Parque,Propiedad
+37,Impuesto de lujo,Especial
+38,Paseo del Muelle,Propiedad
+39,Regreso a Salida,Especial

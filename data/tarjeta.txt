@@ -1,0 +1,30 @@
+Casualidad,Avanza hasta la salida,mover,0
+Casualidad,Ve a la Cárcel (no pases por salida),no_pasa_por_salida,0
+Casualidad,Retrocede tres espacios,mover,-3
+Casualidad,Has sido elegido presidente del consejo,pagar,50
+Casualidad,Avanza hasta el Ferrocarril Reading si pasas por salida cobra, mover,5
+Casualidad,Avanza hasta la Avenida Illinois si pasas por salida cobra,mover,24
+Casualidad,Avanza hasta la Avenida San Carlos si pasas por salida cobra,mover,11
+Casualidad,La banca te paga un dividendo,cobrar,50
+Casualidad,Sal de la cárcel gratis,carcel_libre,0
+Casualidad,Paga una multa de 15 o usa una carta de cárcel,pagar,15
+Casualidad,Has ganado un premio de belleza,cobrar,10
+Casualidad,Viaja hasta el Ferrocarril más cercano y paga el doble de alquiler si está comprado,mover,5
+Casualidad,Ve hasta la Compañía de Agua y paga el doble de alquiler si está comprada,mover,28
+Casualidad,Tu edificio necesita reparaciones,pagar,25
+
+Arca Comunal,Avanza hasta la salida y cobra,cobrar,200
+Arca Comunal,Ve a la cárcel (no pases por salida),no_pasa_por_salida,0
+Arca Comunal,Recibes por la venta de acciones,cobrar,50
+Arca Comunal,Paga el hospital,pagar,100
+Arca Comunal,Paga tu seguro médico,pagar,50
+Arca Comunal,Has heredado,cobrar,100
+Arca Comunal,Error del banco a tu favor,cobrar,200
+Arca Comunal,Pagas una multa por reparación de calles,pagar,40
+Arca Comunal,Es tu cumpleaños: recibe de cada jugador,cobrar,10
+Arca Comunal,Has ganado el segundo premio en un concurso de belleza,cobrar,10
+Arca Comunal,Recibes un reembolso de impuestos,cobrar,20
+Arca Comunal,Vas a cobrar intereses de tus inversiones,cobrar,25
+Arca Comunal,Ve directamente a la cárcel,no_pasa_por_salida,0
+Arca Comunal,Sal de la cárcel gratis,carcel_libre,0
+Arca Comunal,Recibes por servicios bancarios,cobrar,100
