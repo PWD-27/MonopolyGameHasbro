@@ -41,7 +41,7 @@
 
 #### 🎯 Actividades Realizadas
 - Diseño conceptual de los TADs base: Jugador, Propiedad, Banco, Casilla, Tarjeta. (3h)
-- Revisión cruzada entre Alejandro y Alfonso para validar responsabilidades de cada módulo. (1h)
+- Revisión cruzada entre Carlos y Alfonso para validar responsabilidades de cada módulo. (1h)
 
 #### 🚧 Problemas Encontrados
 - Se plantearon TADs innecesarios que complicaban el futuro del proyecto.  
@@ -70,7 +70,7 @@
   **Solución:** Se investigaron plantillas e integró una plantilla profesional como esta.
 
 #### ✅ Decisiones Clave
-- Alejandro liderará documentación y GitHub.
+- Carlos liderará documentación y GitHub.
 - Alfonso liderará implementación de TADs.
 
 #### ➡️ Próximos Pasos
@@ -109,7 +109,7 @@
 #### 🚧 Problemas Encontrados
 - Desorden en los archivos del repositorio.  
   **Estado:** Resuelto  
-  **Solución:** Reestructuración completa de carpetas por Alejandro.
+  **Solución:** Reestructuración completa de carpetas por Carlos.
 
 #### ✅ Decisiones Clave
 - Establecer un estándar de nombres de archivo y carpetas.
@@ -205,3 +205,39 @@ flowchart TD
 
     BANCO --> PROPIEDAD
     BANCO --> JUGADOR
+```
+
+# 📘 Historia del Proyecto: El Camino detrás de MonopolyHasbro  
+
+
+Desarrollar **MonopolyHasbro** ha sido más que un simple ejercicio de programación: ha sido un camino lleno de decisiones, aprendizajes, retrocesos, errores, reconstrucciones y, sobre todo, crecimiento conjunto.
+
+El proyecto inició con un paso fundamental: **leer el documento entregado por el profesor**, el cual contenía las generalidades y requisitos del sistema. Pero muy rápido nos dimos cuenta de que el proyecto era mucho más profundo de lo que parecía. Para tener una arquitectura clara, estudiamos las **reglas oficiales del Monopoly de Hasbro**, identificando los elementos esenciales que más tarde se convertirían en los **TADs base del juego**.
+
+Durante esta etapa surgieron varios conceptos erróneos y estructuras mal pensadas. Algunos TADs eran innecesarios, otros iban a complicar el proyecto en fases posteriores. En este punto, la claridad de Alfonso fue fundamental: él detectó inconsistencias y ayudó a depurar las primeras ideas, evitando problemas estructurales que habríamos tenido más adelante. Entre ambos logramos quedarnos con los TAD esenciales: Jugadores, Banco, Tarjetas, Propiedades, Tablero, Casilla y Juego.
+
+Mientras Alfonso impulsaba la parte más técnica del código, yo (Carlos) me encargaba de organizar los documentos, estudiar la lógica general, revisar información externa, preparar archivos, mantener carpetas ordenadas y gestionar el control de versiones en GitHub. Ambos contribuíamos a la lógica del proyecto, pero cada uno se enfocaba en su rol principal para mantener un flujo organizado.
+
+Más adelante surgió la necesidad de elaborar una **bitácora formal**, pero al inicio no sabíamos cómo debía ser. Revisamos plantillas y modelos profesionales, y con esa información construimos nuestra propia bitácora, más completa, útil y clara para registrar el proceso real del proyecto.
+
+No todo fue lineal. Tuvimos un período de **baja comunicación** durante 3 - 4 días debido a situaciones personales y académicas. Ese silencio generó un pequeño retroceso, pero también fue un punto de reflexión. Decidimos mejorar la coordinación, realizar reuniones más frecuentes, revisar tareas juntas y mantener un ambiente de trabajo colaborativo y respetuoso.
+
+Desde ese momento, el proyecto tomó fuerza. Las ideas empezaron a conectarse mejor, y cada módulo implementado -el banco, las propiedades, las tarjetas, la lógica del tablero, las colas, las operaciones financieras, los estados del juego y las estructuras hash— se convirtió en un avance significativo.
+
+También enfrentamos obstáculos técnicos importantes:  
+- Conflictos y errores en GitHub.
+- Archivos en rutas incorrectas.
+- Diferencias entre ramas.
+- Commits desordenados.
+- Problemas de integración entre TADs.
+- Reestructuraciones de código necesarias para mantener coherencia.
+
+Sin embargo, cada error nos enseñó algo nuevo: a mantener orden, a documentar correctamente, a versionar con responsabilidad y a mejorar la arquitectura del sistema.
+
+Hoy el proyecto cuenta con una estructura clara, TADs robustos, archivos bien organizados, reglas fieles al Monopoly original y un flujo lógico que integra correctamente a todos los componentes. Pero más importante que todo esto, aprendimos que programar en equipo implica **comunicación, paciencia, rol definido, respeto por el proceso del otro y capacidad de adaptación**.
+
+**MonopolyHasbro** no es solo un proyecto académico:  
+es una experiencia de aprendizaje profundo y un ejemplo de cómo dos personas, aun con estilos diferentes, pueden construir algo sólido trabajando juntas.
+
+En definitiva:  
+Este proyecto nos enseñó a programar mejor, a organizarnos mejor y a ser un mejor equipo.
